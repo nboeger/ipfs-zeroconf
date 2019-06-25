@@ -1,21 +1,12 @@
 package main
 
 import (
- // "fmt"
  "log"
   "net"
-//  "strings"
-//  "strconv"
- // "time"
- // "github.com/oleksandr/bonjour"
- // "flag"
   "context"
   "time"
   shell "github.com/ipfs/go-ipfs-api"
 )
-
-//const IPFS_IP_ADDR = 2
-//const IPFS_PORT    = IPFS_IP_ADDR + 2
 
 type NetInfo struct {
   ID           string
