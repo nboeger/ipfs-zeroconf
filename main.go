@@ -7,6 +7,7 @@ import (
   "flag"
   "fmt"
   "context"
+  "io/ioutil"
   "github.com/grandcat/zeroconf"
   "github.com/oleksandr/bonjour"
 )
@@ -96,6 +97,7 @@ func main() {
     log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Llongfile)
   } else {
     log.SetFlags(0)
+    log.SetOutput(ioutil.Discard)
   }
 
   err := ni.Setup()
