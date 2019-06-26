@@ -28,6 +28,5 @@ Below are the command line options
 
   -D <string> Domain to announced on (default is local)
 
-
-
+  -cmd <command> Right now its only stop to shutdown
 
