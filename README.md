@@ -14,19 +14,16 @@ Clone the repo or you can run:
 
 ## Running 
 
-To run the utility just build and run ./ipfs-zeroconf 
+To run the utility just build and run `./ipfs-zeroconf`
 
 ## Options
 
 Below are the command line options
 
-  -d Turn on debugging
-
-  -t <int> Timeout
-
-  -s <string> Service string to be used when announcing
-
-  -D <string> Domain to announced on (default is local)
+- `-d` Turn on debugging
+- `-t <int>` Timeout
+- `-s <string>` Service string to be used when announcing
+- `-D <string>` Domain to announced on (default is local)
 
 
 
