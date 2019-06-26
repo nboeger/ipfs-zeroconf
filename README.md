@@ -24,5 +24,5 @@ Below are the command line options
 - `-t <int>` Timeout
 - `-s <string>` Service string to be used when announcing
 - `-D <string>` Domain to announced on (default is local)
-- `-cmd <command> Right now its only stop to shutdown
+- `-cmd <command>` Right now its only stop to shutdown
 
