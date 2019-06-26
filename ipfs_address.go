@@ -37,15 +37,22 @@ const IPFS_ID        = 6
  * Simple utility to parse an IPFS address
  */
 func (i *IPFSAddr) Parse(s string) (error) {
+  var err error
   bar := strings.Split(s, "/")
   if len(bar) == ADDRLEN {
     i.URL = s
     i.Transport = bar[IPFS_TRANSPORT]
-    i.IP        = net.ParseIP(bar[IPFS_IP_ADDR])
     i.Protocol  = bar[IPFS_PROTOCOL]
-    i.Port,_    = strconv.Atoi(bar[IPFS_PORT])
     i.Type      = bar[IPFS_TYPE]
     i.ID        = bar[IPFS_ID]
+    i.Port,err  = strconv.Atoi(bar[IPFS_PORT])
+    if err != nil {
+      return  err
+    }
+    i.IP        = net.ParseIP(bar[IPFS_IP_ADDR])
+    if i.IP == nil {
+      return  errors.New("Error cannot parse IPFS IP address: wrong type!")
+    }
   } else {
     return  errors.New("Error cannot parse IPFS address: wrong length!")
   }

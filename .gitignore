@@ -12,4 +12,4 @@
 *.out
 
 # Ignore the binary
-ipfs-zeroconf
+./ipfs-zeroconf
