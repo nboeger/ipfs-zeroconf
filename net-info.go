@@ -132,7 +132,7 @@ func (ni *NetInfo) AddHost(h IPFSAddr) (error) {
     defer cancel()
     err := sh.SwarmConnect(ctx,  h.URL)
     if err != nil {
-      log.Fatal(err)
+      log.Print(err)
       return err
     }
   }

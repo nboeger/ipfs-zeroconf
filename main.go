@@ -71,7 +71,12 @@ func Discover(ni NetInfo) {
         if err != nil {
           log.Fatal("Failed to parse Bonjour string!")
         }
-        ni.AddHost(foo)
+        err = ni.AddHost(foo)
+        if err != nil {
+          // We will print the error but ignore the fail
+          // its not a big deal. Just add others
+          log.Print(err)
+        }
       }
     }(entries)
 
