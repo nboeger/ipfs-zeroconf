@@ -7,6 +7,7 @@ import (
   "strings"
   "strconv"
   "errors"
+	"fmt"
 )
 
 /*
@@ -39,7 +40,7 @@ const IPFS_ID        = 6
 func (i *IPFSAddr) Parse(s string) (error) {
   var err error
   bar := strings.Split(s, "/")
-  if len(bar) == ADDRLEN {
+  if len(bar) >= ADDRLEN {
     i.URL = s
     i.Transport = bar[IPFS_TRANSPORT]
     i.Protocol  = bar[IPFS_PROTOCOL]

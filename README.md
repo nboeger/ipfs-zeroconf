@@ -5,6 +5,8 @@ This is a Bonjour/Zeroconf utility for IPFS to add peers in the local network.
 
 ## Install
 
+This requires golang v1.13 or higher! 
+ 
 Clone the repo or you can run:
 ```shell
   
